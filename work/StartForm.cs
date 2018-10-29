@@ -96,9 +96,9 @@ namespace work
 
         private void OpenNextFormButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             var mainform = new MainForm(dt);
-            mainform.Closed += (s, args) => this.Close();
+            mainform.Closed += (s, args) => Close();
             mainform.Show();
 
         }
