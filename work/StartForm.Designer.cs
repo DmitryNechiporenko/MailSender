@@ -36,6 +36,7 @@
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.OpenClientsDialog = new System.Windows.Forms.OpenFileDialog();
             this.OpenNextFormButton = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,16 +112,34 @@
             this.OpenNextFormButton.UseSelectable = true;
             this.OpenNextFormButton.Click += new System.EventHandler(this.OpenNextFormButton_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.BackgroundImage = global::MailSender.Properties.Resources.settings_icon;
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton1.Location = new System.Drawing.Point(395, 29);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(32, 28);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.White;
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 450);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.OpenNextFormButton);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.ChooseFileButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "StartForm";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Brown;
             this.Text = "Автоматическая рассылка писем";
             this.Load += new System.EventHandler(this.StartForm_Load);
@@ -138,5 +157,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.OpenFileDialog OpenClientsDialog;
         private MetroFramework.Controls.MetroButton OpenNextFormButton;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

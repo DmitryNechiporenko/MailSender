@@ -44,6 +44,7 @@
             this.DelAttachButton = new MetroFramework.Controls.MetroButton();
             this.filesLabel = new MetroFramework.Controls.MetroLabel();
             this.closeButton = new MetroFramework.Controls.MetroButton();
+            this.SettingsButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // SubjectTextBox
@@ -122,7 +123,7 @@
             // ChooseAnotherFileButton
             // 
             this.ChooseAnotherFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChooseAnotherFileButton.Location = new System.Drawing.Point(512, 39);
+            this.ChooseAnotherFileButton.Location = new System.Drawing.Point(459, 31);
             this.ChooseAnotherFileButton.Name = "ChooseAnotherFileButton";
             this.ChooseAnotherFileButton.Size = new System.Drawing.Size(164, 37);
             this.ChooseAnotherFileButton.Style = MetroFramework.MetroColorStyle.Brown;
@@ -233,11 +234,27 @@
             this.closeButton.Visible = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackgroundImage = global::MailSender.Properties.Resources.settings_icon;
+            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SettingsButton.Location = new System.Drawing.Point(635, 31);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(32, 28);
+            this.SettingsButton.Style = MetroFramework.MetroColorStyle.White;
+            this.SettingsButton.TabIndex = 25;
+            this.SettingsButton.UseCustomBackColor = true;
+            this.SettingsButton.UseCustomForeColor = true;
+            this.SettingsButton.UseSelectable = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 575);
+            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.filesLabel);
             this.Controls.Add(this.DelAttachButton);
@@ -252,7 +269,9 @@
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.SubjectTextBox);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Brown;
             this.Text = "Автоматическая рассылка писем";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -278,6 +297,7 @@
         private MetroFramework.Controls.MetroButton DelAttachButton;
         private MetroFramework.Controls.MetroLabel filesLabel;
         private MetroFramework.Controls.MetroButton closeButton;
+        private MetroFramework.Controls.MetroButton SettingsButton;
     }
 }
 

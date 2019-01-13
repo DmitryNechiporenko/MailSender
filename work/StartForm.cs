@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MailSender.Resources;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using ExcelObj = Microsoft.Office.Interop.Excel;
@@ -101,6 +102,12 @@ namespace work
             mainform.Closed += (s, args) => Close();
             mainform.Show();
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            var settForm = new SettingsForm();
+            settForm.Show();
         }
     }
 }
